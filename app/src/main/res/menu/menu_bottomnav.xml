@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home">
+
+    </item>
+
+    <item android:id="@+id/menu_notes"
+        android:title="Notes"
+        android:icon="@drawable/ic_notes">
+
+    </item>
+
+    <item android:id="@+id/menu_list"
+        android:title="List"
+        android:icon="@drawable/ic_todo">
+
+    </item>
+
+
+
+    <item android:id="@+id/menu_Feed"
+        android:title="Feedback"
+        android:icon="@drawable/ic_feedback"
+        android:iconTint="@color/white">
+
+    </item>
+
+</menu>

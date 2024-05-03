@@ -1,0 +1,71 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:gravity="top"
+    android:background="@color/blue"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <!-- TextView with padding applied -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/title"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        android:textColor="@color/white"
+        android:text="Piggy Bank Paradise"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:padding="16dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"/>
+
+    <!-- CardView containing the EditText -->
+    <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:padding="0dp">
+
+        <EditText
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:hint="Search"
+            android:textColorHint="@color/blue"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:background="@drawable/blue_border"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/blue"
+            android:paddingLeft="30dp"
+            android:focusable="true"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_search"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="10dp" />
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

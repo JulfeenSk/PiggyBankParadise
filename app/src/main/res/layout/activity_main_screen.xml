@@ -1,0 +1,185 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarmain"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#08B2FF"
+        android:layout_alignParentTop="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/bottomNav"
+    android:layout_below="@id/toolbarmain">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="#EAE8E8">
+
+        <EditText
+            android:layout_width="363dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blue_border"
+            android:hint="       Search "
+            android:layout_marginBottom="10dp" >
+
+        </EditText>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_search">
+
+        </ImageView>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="370dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#885ADA"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="20dp"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <TextView
+                android:id="@+id/monthtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Month"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/yeartxt"
+                app:layout_constraintHorizontal_bias="0.662"
+                app:layout_constraintStart_toEndOf="@+id/monthtxt"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/yeartxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="88dp"
+                android:text="Year"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                android:layout_marginTop="2dp"
+                android:layout_marginHorizontal="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/monthtxt"
+                app:layout_constraintStart_toEndOf="@+id/monthtxt"
+                app:layout_constraintEnd_toStartOf="@+id/yeartxt"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Budget: "
+                app:layout_constraintTop_toBottomOf="@+id/monthtxt"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:text="Reamining Budget:"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/yeartxt">
+
+            </TextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+
+</ScrollView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="350dp"
+        android:layout_marginBottom="93dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
+
+    <ImageButton
+        android:layout_width="47dp"
+        android:layout_height="41dp"
+        android:background="#08B2FF"
+        android:src="@drawable/ic_add"
+        android:padding="10dp" />
+
+</androidx.cardview.widget.CardView>
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+android:id="@+id/bottomNav"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="#08B2FF"
+android:layout_alignParentBottom="true"
+app:menu="@menu/menu_bottomnav" />
+
+    </RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginback"
+    tools:context=".LoginAndSignup.RegistrationScreen">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="126dp"
+        android:layout_height="88dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/logo">
+
+    </ImageView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:navigationIcon="?android:attr/homeAsUpIndicator"
+        app:title=" "
+        app:titleTextColor="@color/black"
+        android:layout_alignParentTop="true" />
+
+
+    <TextView
+        android:id="@+id/registertitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="@color/black"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Name/Id:"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="340dp"
+        android:layout_marginStart="50dp"/>
+
+
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:hint="Enter User name"
+        android:textColor="@color/black"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="365dp"
+        android:background="@drawable/blue_border"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Password:"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="415dp"
+        android:layout_marginStart="50dp"
+        />
+
+    <EditText
+        android:id="@+id/enterPassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:hint="Password(min 8 characters)"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="440dp"
+        android:background="@drawable/blue_border"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Password:"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="490dp"
+        android:layout_marginStart="50dp"
+        />
+
+    <EditText
+        android:id="@+id/editPass"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:hint="Re-enter Password"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="515dp"
+        android:background="@drawable/blue_border"/>
+
+    <Button
+        android:id="@+id/registerbutton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:backgroundTint="@color/blue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="615dp"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="618dp" />
+
+    <TextView
+        android:id="@+id/logintext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Login"
+        android:textColor="@color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

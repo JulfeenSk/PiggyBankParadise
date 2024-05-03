@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".HomeScreen">
+
+    <TextView
+        android:id="@+id/notesHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:text="Notes"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/blue"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/notesSearch"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/notesHeading"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/blue_border"
+        android:hint="Search notes"
+        android:textColorHint="@color/blue"
+        android:paddingStart="35dp"
+        android:paddingEnd="16dp"
+        android:imeOptions="actionSearch"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_search"
+        android:layout_marginTop="67dp"
+        android:layout_marginStart="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white"
+        android:layout_below="@+id/notesSearch"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="16dp"
+        tools:listitem="@layout/note_item"/>
+
+</RelativeLayout>
